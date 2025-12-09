@@ -21,6 +21,7 @@ body{
     background-repeat: no-repeat;  
     background-attachment: fixed;
     animation: backgroundTrocar 4s linear infinite alternate-reverse;
+    overflow-y: hidden;
 }
 @keyframes backgroundTrocar{
     0%{
