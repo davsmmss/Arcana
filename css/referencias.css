@@ -1,0 +1,204 @@
+:root{
+    --corBackground: #572e54;
+    --corFonteNormal: #ceb2bd;
+    --corFonteAlternativa: #482a41;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Spectral";
+}
+
+
+body{
+    background-image: url(../img/backgroundNebulosa.png), url(../img/backgroundNebulosa2.png);
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    animation: backgroundTrocar 4s linear infinite alternate-reverse;
+}
+@keyframes backgroundTrocar{
+    0%{
+        background-image: url(../img/backgroundNebulosa.png);
+    }
+    100%{
+        background-image: url(../img/backgroundNebulosa2.png);
+    }
+}
+
+
+header{
+    background-color: rgba(87, 46, 84, 0.7);
+}
+
+footer{
+    background-color: #492547;
+}
+footer h2, footer h3, footer a:hover{
+    color: #E5CDDE;
+}
+footer a{
+    color: var(--corFonteNormal);
+}
+
+.menu{
+    background-color: var(--corBackground);
+}
+.menu a{
+    color: var(--corFonteNormal);
+}
+.menu li:hover{
+    background-color: #422240;
+}
+.lista{
+    border-color: var(--corFonteNormal);
+    color: var(--corFonteNormal);
+}
+#sublista{
+    background-color: #2e172c;
+}
+#sublista li:hover{
+    background-color: #1b0b1a;
+}
+
+main{
+    color: var(--corFonteNormal);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10vw;
+    margin: 10vh 0 20vh 0;
+}
+.logo img{
+    width: 20%;
+    animation: diminuirAumentar 7.5s ease-in-out infinite alternate, girarLogo 90s ease infinite;
+}
+@keyframes diminuirAumentar{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.25;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes girarLogo{
+    0%{
+        rotate: 0;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+
+
+
+.logo .textoEspaco{
+    width: 40%;
+}
+
+
+.cards{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(25vw, 27.5vw));
+    gap: 10vh;
+    padding-bottom: 20vh;
+}
+
+.card{
+    background-color: var(--corBackground);
+    opacity: 0.85;
+    padding: 15px;
+    border-radius: 15px;
+}
+.card a{
+    text-decoration: none;
+    color: var(--corFonteNormal);
+    font-size: 1.5rem;
+    transition: font-size 0.2s ease;
+}
+.card a:hover{
+    color: #E5CDDE;
+    font-size: 1.6rem;
+    transition: font-size 0.2s ease;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.icon img{
+    width: 17.5%;
+    margin-right: 5px;
+}
+.icon h2{
+    text-align: center;
+    width: 82.5%;
+}
+
+.textoCard a{
+    display: block;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+
+
+
+@media screen and (min-width: 471px) and (max-width: 1023px){
+    .logo{
+        padding: 5vh 0;
+        flex-direction: column;
+    }
+    .logo img{
+        width: 40%;
+    }
+    .logo .textoEspaco{
+        margin-top: 5vh;
+        width: 70%;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2, minmax(40vw, 45vw));
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .logo{
+        padding: 5vh 0;
+        flex-direction: column;
+    }
+    .logo img{
+        width: 55%;
+    }
+    .logo .textoEspaco{
+        margin-top: 5vh;
+        width: 90%;
+    }
+
+
+    .cards{
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .card:first-child{
+        margin-top: 0;
+    }
+    .card{
+        margin: 20px 0;
+    }
+    .card:last-child{
+        margin-bottom: 0;
+    }
+}

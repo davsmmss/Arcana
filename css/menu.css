@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2rem;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+button{
+    font-size: 1rem;
+}
+h1{
+    font-size: 2.3rem;
+}
+h2{
+    font-size: 2.1rem;
+}
+h3{
+    font-size: 1.9rem;
+}
+p{
+    font-size: 1.5rem;
+}
+li{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 10px 2%;
+    align-items: center;
+}
+
+
+#menuLendas p{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#menuBotaoAbrir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5vh;
+    position: fixed;
+    top: calc(10vw 50%);
+    left: 2vw;
+    z-index: 1;
+}
+#menuBotaoAbrir img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: padding 0.6s ease, transform 0.9s ease;    
+}
+#menuBotaoAbrir img:hover{
+    padding: 7.5%;
+    transform: rotateZ(45deg);
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: fit-content;
+    width: 25%;
+    height: 100%;
+    border-radius: 0 25px 25px 0;
+    position: fixed;    
+    top: 0;
+    z-index: 2;
+    font-family: 'Spectral';
+    transform: translateX(-100%);
+    overflow-y: scroll;
+    transition: transform 0.3s ease;
+    font-weight: 600;
+}
+.menu.aberto{
+    transform: translateX(0%);
+}
+.menu p{
+    font-size: 1.3rem;
+}
+
+
+.menuFechar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 17.5vh;
+}
+#menuBotaoFechar{
+    height: 50%;
+    cursor: pointer;
+    transform: 0;
+    padding: 0;
+    transition: height 0.6s ease, transform 0.9s ease;
+}
+#menuBotaoFechar:hover{
+    height: 60%;
+    transform: rotateZ(-45deg);
+}
+
+
+
+.lista{
+    border-top: 2.5px solid;
+    height: 82.5vh;
+}
+.menu li{
+    width: 100%;
+    height: 11.25vh;
+    cursor: pointer;
+    position: relative;
+}
+.menu a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-decoration: none;
+}
+.menu img{
+    height: 90%;
+    padding: 17.5px;
+}
+.menu p{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    white-space: pre;
+}
+#iconSublista{
+    height: 20%;
+    margin-left: 5%;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+#iconSublista.aberto{
+    transform: rotateZ(180deg);
+    transition: transform 0.2s ease;
+}
+.menu li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+
+#sublista div{
+    height: fit-content;
+    overflow: hidden;
+}
+#sublista li{
+    height: 11.25vh;
+    padding-left: 7.5%;
+}
+#sublista{
+    display: grid;
+    grid-template-rows: 0fr;
+    list-style: none;
+    text-align: left;
+    transition: grid-template-rows 0.3s ease;
+    overflow: hidden;
+}
+#sublista.aberto{
+    grid-template-rows: 1fr;
+    > body{
+        overflow: hidden;
+    }
+}
+#sublista img{
+    height: 95%;
+    padding: 17.5px;
+}
+
+.logotipo{
+    position: relative;
+    height: 100%;
+    left: 50%;
+    translate: -50%;
+    padding: 2.5px;
+    transition: padding 0.3s ease;
+}
+.logotipo img{
+    height: 100%;
+    cursor: pointer;
+}
+.logotipo:hover{
+    padding: 0;
+}
+
+.redeSocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    top: 50%;
+    right: 2vw;
+    translate: 0% -50%;
+    height: 80%;
+    gap: 5px;
+}
+.redeSocial a{
+    height: 80%;
+}
+.redeSocial img{
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    padding: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: padding 0.3s ease;
+}
+.redeSocial img:hover{
+    padding: 0;
+}
+
+@media screen and (min-width: 1024px){
+    
+}
+
+@media screen and (min-width: 621px) and (max-width: 1023px){
+    header{
+        height: 12.5vh;
+    }
+
+    .menu{
+        width: 50%;
+    }
+    .menu img{
+        padding: 25px;
+    }
+    .menu li{
+        height: 17.5%;
+    }
+
+    #menuBotaoAbrir{
+        height: 8.75vh;
+    }
+    #sublista li{
+        height: 15vh;
+        padding-left: 5%;
+    }
+    #sublista img{
+        padding: 15px;
+    }
+    .redeSocial{
+        gap: 2.5px;
+    }
+}
+
+@media screen and (max-width: 620px){
+    header{
+        height: 13vh;
+    }
+    #menuBotaoAbrir{
+        height: 9.5vh;
+    }
+
+    .menu{
+        width: 100%;
+        border-radius: 0;
+    }
+    .menu img{
+        padding: 25px;
+    }
+
+    .menu li{
+        height: 22.5%;
+    }
+
+    #sublista li{
+        height: 18.75vh;
+        padding-left: 0;
+    }
+    #iconSublista{
+        height: 15%;
+    }
+
+    .logotipo{
+        padding: 0.1%;
+    }
+    .redeSocial{
+        display: none;
+    }
+}

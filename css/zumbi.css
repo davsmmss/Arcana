@@ -1,0 +1,244 @@
+:root{
+    --corBackground: #D7D0CD;
+    --corFonteNormal: #CCC6FF;
+    --corFonteAlternativa: #4D4D4D;
+}
+
+body{
+    background-image: url(../img/zumbi/textura.png), linear-gradient(to bottom, #1c1c1c, #9ba397);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+header{
+    background-color: var(--corBackground);
+    color: var(--corFonteAlternativa);
+}
+
+footer{
+    background-color: var(--corBackground);
+    position: relative;
+}
+footer h2, footer h3, footer a:hover{
+    color: #918D8B;
+}
+footer a{
+    color: var(--corFonteAlternativa);
+}
+
+.menu{
+    background-color: #F0EBE9;
+}
+.menu a{
+    color: #918D8B;
+}
+.menu li:hover{
+    background-color: rgb(180, 177, 176);
+}
+.lista{
+    border-color: var(--corFonteAlternativa);
+    color: var(--corFonteAlternativa);
+}
+#sublista{
+    background-color: #4D4D4D;
+}
+#sublista li:hover{
+    background-color: #333533;
+}
+
+main{
+    font-family: 'Teachers';
+    color: var(--corFonteNormal);
+    padding-top: 20vh;
+    position: relative;
+}
+
+
+
+main section:first-child{
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    margin-bottom: 10vh;
+}
+.esquerda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.card{
+    width: 80%;
+    padding: 0 10px;
+    background-color: var(--corFonteAlternativa);
+    padding: 0 10px;
+    border-radius: 15px;
+}
+.card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+.card img{
+    width: 100%;
+}
+
+
+.textoEspaco p{
+    padding: 10px 0;
+}
+
+section:first-child .textoEspaco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    padding: 20px;
+}
+section:first-child .textoEspaco img{
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+
+main section:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vw;
+    padding-bottom: 80vh;
+}
+.poster{
+    width: 25%;
+}
+.poster img{
+    width: 100%;
+}
+
+section:nth-child(2) .textoEspaco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+}
+
+
+section:nth-child(2) .textoEspaco p:last-child{
+    margin-top: 50px;
+}
+
+
+
+
+.lua{
+    width: 25%;
+    position: absolute;
+    right: 11%;
+    top: 4%;
+    z-index: -2;
+    transform: rotateZ(-90deg);
+    opacity: 0.5;
+}
+.floresta{
+    width: 100%;
+    position: absolute;
+    bottom: 20vw;
+    z-index: -2;
+    opacity: 0.35;
+}
+.cemiterio{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
+@media screen and (min-width: 471px) and (max-width: 1023px){
+    main section:first-child{
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+    }
+    .esquerda{
+        width: 100%;
+        grid-row: 2;
+    }
+    .card{
+        width: 100%;
+        display: flex;
+        padding: 10px;
+    }
+    .card div:first-child{
+        flex-direction: column-reverse;
+    }
+
+    section:first-child .textoEspaco{
+        width: 100%;
+        grid-row: 1;
+    }
+
+    main section:nth-child(2){
+        gap: 50px;
+    }
+    .poster{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 470px){
+    main section:first-child{
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+    }
+    .esquerda{
+        width: 100%;
+        grid-row: 2;
+    }
+    .card{
+        width: 100%;
+        display: block;
+        padding: 10px;
+    }
+    .card div:first-child{
+        flex-direction: column-reverse;
+    }
+
+    section:first-child .textoEspaco{
+        width: 100%;
+        grid-row: 1;
+    }
+    section:first-child .textoEspaco img{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    main section:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40vh;
+        gap: 10vh;
+    }
+    .poster{
+        width: 80%;
+    }
+
+    section:nth-child(2) .textoEspaco{
+        width: 90%;
+    }
+
+    .lua{
+        right: 5%;
+        top: 0.75%;
+        opacity: 0.8;
+    }
+}

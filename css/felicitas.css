@@ -1,0 +1,314 @@
+:root{
+    --corBackground: #78b4ce;
+    --corFonteNormal: #B8E6FF;
+    --corFonteAlternativa: #3E6C80;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #19333C, #445e69);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+header{
+    background-color: var(--corBackground);
+    color: var(--corFonteAlternativa);
+}
+
+footer{
+    background-color: var(--corBackground);
+}
+footer h2, footer h3, footer a:hover{
+    color: var(--corFonteAlternativa);
+}
+footer a{
+    color: #082d3d;
+}
+
+.menu{
+    background-color: #709CAF;
+}
+.menu a{
+    color: var(--corFonteAlternativa);
+}
+.menu li:hover{
+    background-color: #84B5CA;
+}
+.lista{
+    border-color: var(--corFonteAlternativa);
+    color: var(--corFonteAlternativa);
+}
+#sublista{
+    background-color: #0b2530;
+}
+#sublista li:hover{
+    background-color: #032f3f;
+}
+
+.degrade{
+    width: 100%;
+    height: 25vh;
+    background-image: linear-gradient(to bottom, #06101400, var(--corBackground));
+}
+
+main{
+    color: var(--corFonteNormal);
+    padding: 20vh 0 100vh 0;
+    font-family: 'Outfit';
+}
+
+main section{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+}
+
+main section:first-child{
+    margin-bottom: 20vh;
+}
+section:first-child .textoEspaco{
+    width: 50%;
+}
+.textoEspaco img{
+    width: 100%;
+    margin-bottom: 75px;
+}
+
+section:first-child .imagemCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 25%;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: #6CA3BA90;
+}
+.imagemCard img{
+    padding: 20px;
+    width: 100%;
+}
+
+
+
+section:nth-child(2){
+    padding: 0 25px;
+}
+
+.esquerda{
+    width: 30%;
+}
+.direita{
+    width: 55%;
+    padding: 0 50px;
+    align-self: center;
+}
+section:nth-child(2) .esquerda .imagemCard{
+    background-color: #6CA3BA90;
+    height: fit-content;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.textoEspaco p, .esquerda p, .direita p{
+    padding: 7.5px 0;
+}
+.direita p:nth-child(3){
+    margin-top: 50px;
+}
+
+
+
+.paz{
+    width: 12.5%;
+    position: absolute;
+    right: 47.5%;
+    bottom: 79vw;
+    z-index: -1;
+}
+.casal{
+    width: 30%;
+    position: absolute;
+    right: 37.5%;
+    bottom: 22.5vw;
+    z-index: -1;
+}
+.cidade{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+}
+
+
+
+@media screen and (min-width: 471px) and (max-width: 1023px){
+    main{
+        padding: 20vh 0 40vh 0;
+    }
+
+    section:first-child{
+        padding: 0 15px;
+    }
+
+    section:first-child .textoEspaco{
+        width: 60%;
+    }
+
+    section:first-child .imagemCard{
+        width: 40%;
+    }
+
+
+    section:nth-child(2){
+        padding: 0 15px;
+    }
+    .esquerda{
+        align-self: center;
+        width: 60%;
+    }
+    .direita{
+        width: 60%;
+        padding: 0;
+    }
+
+
+    .casal{
+        bottom: 30vw;
+    }
+    .paz{
+        bottom: 100vw;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 470px) {
+    main{
+        padding: 10vh 0 70vh 0;
+    }
+
+    main section{
+        display: block;
+    }
+    main section:first-child .textoEspaco{
+        width: 100%;
+        margin-bottom: 10vh;
+        padding: 0 15px;
+    }
+    main section:first-child .imagemCard{
+        width: 100%;
+        border-radius: 0;
+    }
+    .imagemCard img{
+        width: 75%;
+    }
+
+
+
+    main section:nth-child(2){
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+        padding: 0px;
+    }
+
+    .esquerda{
+        display: block;
+        width: 100%;
+        grid-row: 2;
+    }
+    section:nth-child(2) .esquerda .imagemCard{
+        border-radius: 0;
+        margin-bottom: 10vh;
+    }
+    section:nth-child(2) .esquerda p{
+        padding: 0 10px;
+    }
+
+    .direita{
+        width: 100%;
+        padding: 0 10px;
+    }
+
+
+
+    .paz{
+        width: 30%;
+        left: 35%;
+        bottom: 200vw;
+    }
+    .casal{
+        width: 45%;
+        left: 25%;
+        bottom: 90vw;
+    }
+    .cidade{
+        bottom: 75vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    main{
+        padding: 10vh 0 40vh 0;
+    }
+
+    main section{
+        display: block;
+    }
+    main section:first-child .textoEspaco{
+        width: 100%;
+        margin-bottom: 10vh;
+        padding: 0 15px;
+    }
+    main section:first-child .imagemCard{
+        width: 100%;
+        border-radius: 0;
+    }
+    .imagemCard img{
+        width: 75%;
+    }
+
+
+
+    main section:nth-child(2){
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+        padding: 0px;
+    }
+
+    .esquerda{
+        display: block;
+        width: 100%;
+        grid-row: 2;
+    }
+    section:nth-child(2) .esquerda .imagemCard{
+        border-radius: 0;
+        margin-bottom: 7.5vh;
+    }
+    section:nth-child(2) .esquerda p{
+        padding: 0 10px;
+    }
+
+    .direita{
+        width: 100%;
+        padding: 0 10px;
+    }
+
+
+
+    .paz{
+        width: 30%;
+        left: 35%;
+        bottom: 200vw;
+    }
+    .casal{
+        width: 45%;
+        left: 25%;
+        bottom: 110vw;
+    }
+    .cidade{
+        bottom: 100vw;
+    } 
+}

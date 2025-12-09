@@ -1,0 +1,260 @@
+:root{
+    --corBackground: #572e54;
+    --corFonteNormal: #ceb2bd;
+    --corFonteAlternativa: #482a41;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Spectral";
+}
+
+main p{
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+}
+
+body{
+    background-image: url(../img/backgroundNebulosa.png), url(../img/backgroundNebulosa2.png);
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    animation: backgroundTrocar 4s linear infinite alternate-reverse;
+}
+@keyframes backgroundTrocar{
+    0%{
+        background-image: url(../img/backgroundNebulosa.png);
+    }
+    100%{
+        background-image: url(../img/backgroundNebulosa2.png);
+    }
+}
+
+
+header{
+    background-color: rgba(87, 46, 84, 0.7);
+}
+
+footer{
+    background-color: #492547;
+}
+footer h2, footer h3, footer a:hover{
+    color: #E5CDDE;
+}
+footer a{
+    color: var(--corFonteNormal);
+}
+
+.menu{
+    background-color: var(--corBackground);
+}
+.menu a{
+    color: var(--corFonteNormal);
+}
+.menu li:hover{
+    background-color: #422240;
+}
+.lista{
+    border-color: var(--corFonteNormal);
+    color: var(--corFonteNormal);
+}
+#sublista{
+    background-color: #2e172c;
+}
+#sublista li:hover{
+    background-color: #1b0b1a;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    gap: 7.5vh;
+    color: var(--corFonteNormal);
+    margin-bottom: 10vh;
+}
+.logo img{
+    height: 50%;
+    object-fit: cover;
+    animation: diminuirAumentar 7.5s ease-in-out infinite alternate, girarLogo 90s linear infinite;
+}
+
+
+@keyframes diminuirAumentar{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.25;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes girarLogo{
+    0%{
+        rotate: 0;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+
+
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(25vw, 27.5vw));
+    row-gap: 20vh;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 40vh;
+}
+
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22.5vw;
+    height: 27.5vw;
+    background-color: var(--corBackground);
+    opacity: 0.85;
+    position: relative;
+    border-radius: 25px;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 1s ease;
+    transition-delay: 1.7s;
+}
+.icon img{
+    width: 40%;
+    object-fit: contain;
+}
+.icon h1{
+    text-align: center;
+    font-weight: bolder;
+    margin: 10% 7.5%;
+    color: var(--corFonteNormal);
+}
+.cardTexto{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    border-radius: 25px;
+    background-color: var(--corBackground);
+    overflow: hidden;
+    transition: max-height 3s ease;
+    color: var(--corFonteNormal);
+}
+.cardTexto p{
+    margin:  1.25% 7.5%;
+}
+.cardTexto p:first-child{
+    margin-top: 10%;
+}
+.cardTexto button{
+    width: 30%;
+    position: relative;
+    left: 62.5%;
+    margin: 5% 0;
+    padding: 1%;
+    background-color: var(--corFonteNormal);
+    color: var(--corFonteAlternativa);
+    font-weight: bold;
+    border: none;
+    border-radius: 17.5px;
+    cursor: pointer;
+    transition: box-shadow 0.5s linear, padding 0.2s linear;
+}
+.cardTexto button:hover{
+    padding: 1.5%;
+    background-color: rgb(187, 159, 176);
+    box-shadow: 0px 0px 8px 5px #775f7a;
+}
+
+.card:hover{
+    .icon{
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+        transition-delay: 0s;
+    }
+
+    .cardTexto{
+        max-height: 200%;
+        opacity: 1;
+        transition: max-height 3s ease;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 471px) and (max-width: 1023px){
+    .cards{
+        grid-template-columns: repeat(2, minmax(40vw, 45vw));
+        row-gap: 25vh;
+        height: fit-content;
+    }
+    .card{
+        width: 42.5vw;
+        height: 70vw;
+    }
+
+    .cardTexto button{
+        width: 40%;
+        left: 55%;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .logo img{
+        margin-top: 15px;
+        height: 50%;
+    }
+    .logo h2{
+        width: 80%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .cards{
+        display: block;
+    }
+    .card{
+        width: 95%;
+        height: 80vh;
+        margin: 5%;
+        border-radius: 7.5px;
+    }
+    .cardTexto button{
+        width: 45%;
+        left: 50%;
+        border-radius: 15px;
+    }
+}

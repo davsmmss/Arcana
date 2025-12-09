@@ -1,0 +1,328 @@
+:root{
+    --corBackground: #83060f;
+    --corFonteNormal: #cacaca;
+    --corFonteAlternativa: #1c1c1c;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #800008, #2b0000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+header{
+    background-color: #910c1490;
+    color: var(--corFonteAlternativa);
+}
+
+footer{
+    background-color: #000000;
+}
+footer h2, footer h3, footer a:hover{
+    color: #ffffff;
+}
+footer a{
+    color: var(--corFonteNormal);
+}
+
+.menu{
+    background-color: var(--corBackground);
+}
+.menu a{
+    color: var(--corFonteAlternativa);
+}
+.menu li:hover{
+    background-color: #940f18;
+}
+.lista{
+    border-color: var(--corFonteAlternativa);
+    color: var(--corFonteAlternativa);
+}
+#sublista{
+    background-color: #a10a15;
+}
+#sublista li:hover{
+    background-color: #8a0912;
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald';
+    position: relative;
+    padding-bottom: 20vh;
+    color: var(--corFonteNormal);
+}
+
+
+section{
+    display: flex;
+    padding-bottom: 7.5%;
+}
+main section:first-child{
+    padding-top: 10%;
+}
+main section:last-child{
+    padding-bottom: 0;
+}
+.textoEspaco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 57.5%;
+    text-align: center;
+}
+.textoEspaco img{
+    margin-bottom: 10vh;
+}
+.textoEspaco img{
+    width: 75%;
+}
+.textoEspaco p{
+    margin: 1.25% 20%;
+}
+
+section:nth-child(2) .textoEspaco{
+    display: flex;
+    justify-content: center;
+}
+section:nth-child(2) .textoEspaco p:last-child{
+    margin-top: 12.5%;
+}
+
+.cardEspaco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 42.5%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    padding: 7.5% 3.75% 5% 3.75%;
+    border-radius: 25px;
+    background-color: #83060f50;
+}
+.imagemCard{
+    width: 80%;
+    margin-bottom: 12.5%;
+}
+.imagemCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.textoCard{
+    width: 100%;
+}
+.textoCard p{
+    margin: 1% 0;
+}
+.textoCard ul{
+    width: 100%;
+    margin-top: 2.5%;
+    list-style-position: inside;
+}
+.textoCard ul li{
+    width: fit-content;
+    margin: 2.5% 0;
+}
+
+
+section:nth-child(2) .cardEspaco{
+    width: 50%;
+}
+section:nth-child(2) .textoEspaco{
+    width: 50%;
+}
+section:nth-child(2) .card p{
+    text-align: center;
+    margin: 1% 2.5%;
+}
+
+
+.card2{
+    width: 75%;
+    padding: 3.75%;
+    border-radius: 25px;
+    background-color: #83060f75;
+}
+.card2 img{
+    width: 100%;
+}
+.card2 h1{
+    padding: 2.5% 0 0.75% 0;
+}
+
+.card audio::-webkit-media-controls-panel{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+.card audio::-webkit-media-controls-time-remaining{
+    display: none;
+}
+
+
+.passaro{
+    width: 10%;
+    position: absolute;
+    right: 60%;
+    top: 45%;
+    z-index: -1;
+}
+.fundo{
+    width: 100%;
+    position: absolute;
+    bottom: -1%;
+    z-index: -1;
+}
+
+
+@media screen and (min-width: 471px) and (max-width: 1023px){
+    button{
+    font-size: 1rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.75rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1.25rem;
+    }
+    a{
+        font-size: 1.25rem;
+    }
+
+
+
+
+    main section .textoEspaco p{
+        padding: 20px 0;
+        margin: 0 20px;
+    }
+    main section:first-child .textoEspaco img{
+        width: 90%;
+    }
+
+    main section:first-child .cardEspaco .card{
+        width: 95%;
+    }
+    main section:first-child .cardEspaco .card .imagemCard{
+        width: 95%;
+    }
+
+    .card, .card2{
+        border-radius: 10px;
+    }
+
+    .card2{
+        width: 95%;
+    }
+    .card2 h1{
+        padding: 0 0 15px 0;
+    }
+    .card2 img{
+        margin-bottom: 5px;
+    }
+
+
+
+    .passaro{
+    right: 60%;
+    top: 48.75%;
+    }
+}
+
+@media screen and (max-width: 470px){
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.9rem;
+    }
+    h3{
+        font-size: 1.7rem;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    button{
+        font-size: 1.2rem;
+    }
+
+
+
+    .textoEspaco p{
+        padding: 10px 15px;
+        margin: 0;
+    }
+    .textoEspaco img{
+        width: 85%;
+        margin-bottom: 30px;
+    }
+    .cardEspaco p{
+        padding: 7.5px 0;
+        margin: 0;
+    }
+
+    section:first-child{
+        display: block;
+    }
+    section:first-child .textoEspaco{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    section:first-child .cardEspaco{
+        width: 100%;
+    }
+    section:first-child .card{
+        width: 100%;
+        border-radius: 0;
+    }
+
+
+
+    section:nth-child(2){
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+    }
+    section:nth-child(2) .textoEspaco{
+        width: 100%;
+        grid-row: 1;
+        margin-bottom: 30px;
+    }
+    section:nth-child(2) .cardEspaco{
+        width: 100%;
+        grid-row: 2;
+    }
+    section:nth-child(2) .card2{
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .card2 h1{
+        padding: 0 0 10px 0;
+    }
+    .card2 img{
+        margin-bottom: 10px;
+    }
+
+    .passaro{
+        right: 25%;
+        top: 65.5%;
+    }
+}
